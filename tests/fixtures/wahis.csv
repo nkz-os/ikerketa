@@ -1,0 +1,6 @@
+disease_name,pathogen_type,scientific_name,woah_listed,zoonotic,affected_species,notifiable_eu
+Foot-and-mouth disease,virus,Aphthovirus,true,false,"bovine;ovine;caprine;porcine",true
+Avian influenza,virus,Influenza A,true,true,"poultry",true
+African swine fever,virus,Asfivirus,true,false,"porcine",true
+Bovine tuberculosis,bacteria,Mycobacterium bovis,true,true,"bovine",true
+Brucellosis,bacteria,Brucella melitensis,true,true,"ovine;caprine;bovine",true

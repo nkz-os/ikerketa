@@ -1,0 +1,6 @@
+feed_name,scientific_name,dry_matter_pct,crude_protein_pct,crude_fiber_pct,metabolizable_energy_mj,organic_compatible,toxicity_notes,suitable_species
+Alfalfa hay,Medicago sativa,88.5,17.2,28.3,8.4,true,,"bovine;ovine;caprine;equine"
+Maize silage,Zea mays,33.0,8.1,20.5,10.8,true,,"bovine;ovine"
+Soybean meal,Glycine max,88.0,44.0,6.5,12.5,false,Contains trypsin inhibitors when raw,"bovine;porcine;poultry"
+Barley grain,Hordeum vulgare,87.0,11.5,5.0,12.9,true,Risk of acidosis at high inclusion,"bovine;ovine;porcine"
+Acorn (Quercus),Quercus ilex,55.0,5.2,14.8,11.2,true,Tannins - limit to 30% diet max,"porcine"

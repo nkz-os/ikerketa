@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ikerketa"
+version = "0.1.0"
+description = "Agronomic data acquisition pipeline for NKZ-BioOrchestrator"
+readme = "README.md"
+license = {text = "AGPL-3.0-or-later"}
+requires-python = ">=3.11"
+authors = [
+    {name = "NKZ Team"},
+]
+
+dependencies = [
+    # Core
+    "pydantic>=2.5,<3",
+    "pydantic-settings>=2.1,<3",
+    "python-dotenv>=1.0,<2",
+    "PyYAML>=6.0,<7",
+    # HTTP & APIs
+    "httpx>=0.27,<1",
+    "tenacity>=8.2,<10",
+    # SPARQL
+    "SPARQLWrapper>=2.0,<3",
+    # Data processing
+    "pandas>=2.1,<3",
+    "pyarrow>=14,<20",
+    # Semantic / JSON-LD
+    "rdflib>=7.0,<8",
+    "pyld>=2.0,<3",
+    # Logging
+    "structlog>=24.1,<26",
+    # CLI
+    "typer>=0.9,<1",
+    "rich>=13,<14",
+    # Hashing / integrity
+    "xxhash>=3.4,<4",
+    # Fuzzy matching
+    "rapidfuzz>=3.5,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9",
+    "pytest-asyncio>=0.23,<1",
+    "pytest-cov>=4.1,<6",
+    "pip-audit>=2.7,<3",
+    "ruff>=0.3,<1",
+    "mypy>=1.8,<2",
+]
+
+[project.scripts]
+ikerketa = "ikerketa.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["ikerketa*"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "S", "B", "A", "C4", "DTZ", "T20", "ICN"]
+ignore = ["S101"]  # allow assert in tests
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "integration: marks tests requiring network access and API keys",
+    "slow: marks tests that hit live external APIs (deselect with -m 'not slow')",
+]
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true

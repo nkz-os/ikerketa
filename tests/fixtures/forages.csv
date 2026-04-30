@@ -1,0 +1,6 @@
+species_name,common_name,family,dry_matter_yield_t_ha,crude_protein_pct,drought_tolerance,grazing_tolerance,nitrogen_fixing,suitable_livestock
+Brachiaria brizantha,Palisade grass,Poaceae,15.0,9.2,moderate,high,false,"bovine;ovine"
+Panicum maximum,Guinea grass,Poaceae,20.0,10.5,moderate,moderate,false,"bovine;equine"
+Stylosanthes guianensis,Stylo,Fabaceae,8.0,16.0,high,moderate,true,"bovine;ovine;caprine"
+Desmodium intortum,Greenleaf desmodium,Fabaceae,6.0,18.5,low,low,true,"bovine;ovine"
+Chloris gayana,Rhodes grass,Poaceae,12.0,8.0,high,high,false,"bovine;ovine;equine"

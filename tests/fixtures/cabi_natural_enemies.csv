@@ -1,0 +1,5 @@
+pest_name,enemy_name,control_type,efficacy,target_stage,enemy_eppo_code
+Leptinotarsa decemlineata,Podisus maculiventris,predator,high,larva,PODIMA
+Cydia pomonella,Trichogramma cacoeciae,parasitoid,moderate,egg,TRCGCA
+Myzus persicae,Aphidius colemani,parasitoid,high,nymph,
+Tetranychus urticae,Phytoseiulus persimilis,predator,high,all,PHYSPE

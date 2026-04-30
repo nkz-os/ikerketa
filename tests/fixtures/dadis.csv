@@ -1,0 +1,6 @@
+breed_name,species,country_origin,use_type,conservation_status,population_size,dad_is_id,transboundary
+Latxa Cara Negra,ovine,ES,dairy,vulnerable,85000,ES-01234,false
+Pirenaica,bovine,ES,meat,not_at_risk,45000,ES-05678,true
+Euskal Oiloa,poultry,ES,egg,endangered,3200,ES-09012,false
+Cerdo Ibérico,porcine,ES,meat,not_at_risk,2500000,ES-03456,true
+Cabra Azpi Gorri,caprine,ES,dairy,critical,1200,ES-07890,false

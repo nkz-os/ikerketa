@@ -1,0 +1,7 @@
+plant_a,plant_b,interaction_type,mechanism,citation
+tomato,basil,helps,repels aphids and whiteflies,Companion Planting Guide 2023
+tomato,cabbage,hurts,allelopathy,Traditional knowledge
+carrot,onion,helps,repels carrot fly,Finch & Collier 2000
+beans,corn,helps,nitrogen_fixation,Three Sisters method
+marigold,tomato,attracts,attracts beneficial insects,Companion Planting Guide 2023
+nasturtium,squash,trap_crop,lures aphids away,Organic Gardening Methods

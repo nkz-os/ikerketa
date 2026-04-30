@@ -1,0 +1,6 @@
+scientific_name,family,common_name_en,common_name_es,native_range,iucn_status,wood_density_kg_m3,growth_rate,max_height_m,nitrogen_fixing,ecosystem_services,deciduous
+Quercus ilex,Fagaceae,Holm oak,Encina,"ES;PT;FR;IT;GR",LC,900,slow,25,false,"carbon_sequestration;shade;fodder;soil_stabilization",false
+Juglans regia,Juglandaceae,Common walnut,Nogal,"ES;FR;IT;TR;IR",LC,640,moderate,30,false,"carbon_sequestration;shade",true
+Castanea sativa,Fagaceae,Sweet chestnut,Castaño,"ES;PT;FR;IT;TR",LC,560,moderate,35,false,"carbon_sequestration;fodder;biodiversity_corridor",true
+Robinia pseudoacacia,Fabaceae,Black locust,Robinia,"US;MX",LC,660,fast,25,true,"nitrogen_fixation;pollinator_habitat;erosion_control",true
+Olea europaea,Oleaceae,Olive,Olivo,"ES;PT;IT;GR;TR",DD,850,slow,15,false,"carbon_sequestration;soil_stabilization;windbreak",false
