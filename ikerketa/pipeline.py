@@ -83,6 +83,11 @@ _CONNECTOR_MODULES: dict[str, str] = {
     "iucn": "iucn_trees",  # DEPRECATED: license incompatible with SaaS
     # Soils
     "soilgrids": "soilgrids",
+    # Environment
+    "natura2000": "natura2000",
+    "eu_pesticides": "eu_pesticides",
+    "cpvo_varieties": "cpvo_varieties",
+    "copernicus_dem": "copernicus_dem",
     # Agroforestry
     "agroforestree": "agroforestree",
     "forages": "forages",
