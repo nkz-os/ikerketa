@@ -36,7 +36,9 @@ class DataSource(str, Enum):
     # Forestry
     GLOBALTREESEARCH = "globaltreesearch"
     EUFORGEN = "euforgen"
-    IUCN = "iucn"
+    IUCN = "iucn"  # DEPRECATED: license incompatible with SaaS commercial use
+    # Soils
+    SOILGRIDS = "soilgrids"
     # Agroforestry
     AGROFORESTREE = "agroforestree"
     FORAGES = "forages"

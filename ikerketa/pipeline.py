@@ -80,7 +80,9 @@ _CONNECTOR_MODULES: dict[str, str] = {
     # Forestry
     "globaltreesearch": "globaltreesearch",
     "euforgen": "euforgen",
-    "iucn": "iucn_trees",
+    "iucn": "iucn_trees",  # DEPRECATED: license incompatible with SaaS
+    # Soils
+    "soilgrids": "soilgrids",
     # Agroforestry
     "agroforestree": "agroforestree",
     "forages": "forages",
