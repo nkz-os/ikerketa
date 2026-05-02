@@ -88,6 +88,8 @@ _CONNECTOR_MODULES: dict[str, str] = {
     "eu_pesticides": "eu_pesticides",
     "cpvo_varieties": "cpvo_varieties",
     "copernicus_dem": "copernicus_dem",
+    "gbif": "gbif_pollinators",
+    "era5": "era5_climate",
     # Agroforestry
     "agroforestree": "agroforestree",
     "forages": "forages",
