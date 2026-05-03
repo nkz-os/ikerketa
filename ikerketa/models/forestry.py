@@ -14,8 +14,8 @@ from pydantic import Field, model_validator
 from ikerketa.models.base import BaseEntity
 
 
-class IUCNStatus(str, Enum):
-    """IUCN Red List conservation status categories."""
+class ConservationStatus(str, Enum):
+    """Conservation status categories (standard IUCN categories, data from multiple sources)."""
 
     NOT_EVALUATED = "NE"
     DATA_DEFICIENT = "DD"
@@ -68,8 +68,8 @@ class TreeSpecies(BaseEntity):
         default_factory=list,
         description="ISO country codes of native range",
     )
-    iucn_status: IUCNStatus = Field(
-        default=IUCNStatus.NOT_EVALUATED,
+    iucn_status: ConservationStatus = Field(
+        default=ConservationStatus.NOT_EVALUATED,
         description="IUCN Red List category",
     )
     wood_density_kg_m3: float | None = Field(
