@@ -2,7 +2,7 @@
 
 **Pipeline de adquisición de datos agronómicos para NKZ-BioOrchestrator.**
 
-IkerKeta (del euskera «ikerketa» = investigación) es un sistema ETL extensible que recolecta, normaliza y unifica datos agronómicos de 18 fuentes abiertas e institucionales en 5 dominios: taxonomía, fitosanitario, edafoclimático, ganadería, y silvicultura. Su salida — JSON-LD y Parquet — alimenta directamente al grafo de conocimiento Neo4j del módulo NKZ-BioOrchestrator.
+IkerKeta (del euskera «ikerketa» = investigación) es un sistema ETL extensible que recolecta, normaliza y unifica datos agronómicos de **25 fuentes** abiertas e institucionales en 7 dominios: taxonomía, fitosanitario, edafoclimático, ganadería, silvicultura, suelos, y clima. Su salida — JSON-LD y Parquet — alimenta directamente al grafo de conocimiento Neo4j del módulo NKZ-BioOrchestrator.
 
 > **Licencia:** AGPL-3.0-or-later · **Python:** ≥ 3.11
 
