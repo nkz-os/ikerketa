@@ -210,13 +210,6 @@ sources:
     update_frequency: annual
     notes: "Recursos genéticos forestales europeos. Distribución de 45 especies arbóreas."
 
-  iucn:
-    name: "IUCN Red List"
-    type: rest_api
-    base_url: "https://apiv3.iucnredlist.org"
-    license: "IUCN Terms"
-    auth: api_key
-    credential_env_var: IUCN_API_TOKEN
     priority: medium
     domain: forestry
     update_frequency: annual

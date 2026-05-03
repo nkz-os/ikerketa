@@ -36,7 +36,10 @@ class DataSource(str, Enum):
     # Forestry
     GLOBALTREESEARCH = "globaltreesearch"
     EUFORGEN = "euforgen"
-    IUCN = "iucn"  # DEPRECATED: license incompatible with SaaS commercial use
+    # IUCN removed — license incompatible with SaaS commercial use.
+    # Conservation status now sourced from GBIF (CC0/CC-BY filtered) and
+    # GlobalTreeSearch (BGCI, open data). The IUCNStatus enum in forestry.py
+    # is renamed to ConservationStatus for the general concept.
     # Soils
     SOILGRIDS = "soilgrids"
     # Agroforestry
