@@ -12,8 +12,10 @@ Orchestrates the full IkerKeta ETL pipeline:
 from __future__ import annotations
 
 import importlib
+import json as _json
 import time
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -162,6 +164,28 @@ def _build_crossref_index(entities: list[BaseEntity]) -> tuple[CrossReferenceInd
     return index, enriched
 
 
+def _emit_progress(step: int, total: int, connector: str, status: str, run_id: str) -> None:
+    """Emit pipeline progress event to Redis Stream (best-effort)."""
+    try:
+        import redis
+        r = redis.Redis.from_url("redis://redis-service:6379/0", socket_connect_timeout=3)
+        r.xadd(
+            "pipeline:progress",
+            {"payload": _json.dumps({
+                "run_id": run_id,
+                "step": step,
+                "total": total,
+                "connector": connector,
+                "status": status,
+                "timestamp": datetime.now(timezone.utc).isoformat(),
+            })},
+            maxlen=500,
+        )
+        r.close()
+    except Exception:
+        pass  # Redis progress is best-effort, never block the pipeline
+
+
 def run_pipeline(
     *,
     sources: list[str] | None = None,
@@ -182,6 +206,7 @@ def run_pipeline(
     """
     start_time = time.monotonic()
     result = PipelineResult()
+    run_id = datetime.now(timezone.utc).strftime("%Y%m%d-%H%M%S")
 
     # Load source configuration
     config = load_sources_config()
@@ -196,15 +221,18 @@ def run_pipeline(
             if cfg.get("enabled", True)
         ]
 
-    _log.info("pipeline_start", sources=run_sources, limit=limit)
+    total_connectors = len(run_sources)
+    _log.info("pipeline_start", sources=run_sources, limit=limit, run_id=run_id)
 
     # Phase 1: Run each connector
-    for source_key in run_sources:
+    for i, source_key in enumerate(run_sources, 1):
         _log.info("connector_run_start", source=source_key)
+        _emit_progress(i, total_connectors, source_key, "running", run_id)
 
         connector = _load_connector(source_key)
         if connector is None:
             result.errors.append(f"Failed to load connector: {source_key}")
+            _emit_progress(i, total_connectors, source_key, "failed", run_id)
             continue
 
         try:
@@ -216,6 +244,7 @@ def run_pipeline(
             if conn_result.error:
                 result.errors.append(f"{source_key}: {conn_result.error}")
                 _log.warning("connector_error", source=source_key, error=conn_result.error)
+                _emit_progress(i, total_connectors, source_key, "failed", run_id)
             else:
                 result.all_entities.extend(conn_result.entities)
                 result.all_relationships.extend(conn_result.relationships)
@@ -225,11 +254,13 @@ def run_pipeline(
                     entities=len(conn_result.entities),
                     relationships=len(conn_result.relationships),
                 )
+                _emit_progress(i, total_connectors, source_key, "completed", run_id)
 
         except Exception as exc:
             error_msg = f"{source_key}: {exc}"
             result.errors.append(error_msg)
             _log.error("connector_crash", source=source_key, error=str(exc))
+            _emit_progress(i, total_connectors, source_key, "failed", run_id)
 
     result.entities_before_dedup = len(result.all_entities)
 
