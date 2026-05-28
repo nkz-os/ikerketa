@@ -42,6 +42,7 @@ class DataSource(str, Enum):
     # is renamed to ConservationStatus for the general concept.
     # Soils
     SOILGRIDS = "soilgrids"
+    CPVO_VARIETIES = "cpvo_varieties"
     # Agroforestry
     AGROFORESTREE = "agroforestree"
     FORAGES = "forages"

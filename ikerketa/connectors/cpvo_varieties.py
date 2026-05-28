@@ -27,7 +27,7 @@ CPVO_URL = "https://cpvo.europa.eu/api/variety-finder"
 class CPVOVarietiesConnector(AbstractConnector):
     """Query CPVO for registered varieties of a crop species."""
 
-    source = DataSource.SOILGRIDS
+    source = DataSource.CPVO_VARIETIES
 
     def fetch(self, lat: float = 0, lon: float = 0, limit: int | None = 50) -> ConnectorResult:
         """Return registered varieties. Species filter via `species` param if needed."""
