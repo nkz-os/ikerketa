@@ -42,6 +42,10 @@ Thumbs.db
 .coverage
 htmlcov/
 
+# Agent artifacts
+.claude/
+docs/superpowers/
+
 # Logs
 logs/
 *.log
