@@ -29,6 +29,21 @@ class ClimateClass(str, Enum):
     Dfb = "Dfb"  # Warm-summer continental (Bavaria, E Europe)
 
 
+class ManagementRegime(str, Enum):
+    """Farming management regime for trial data classification.
+
+    Critical for the regenerative-sequence engine: data from different
+    management systems produce different parameter values (e.g., organic
+    biomass is typically lower but N dynamics differ).
+    """
+
+    ORGANIC = "organic"              # Certified organic, no synthetic inputs
+    CONVENTIONAL = "conventional"     # Standard synthetic fertilizers + pesticides
+    INTEGRATED = "integrated"         # Integrated production (reduced inputs)
+    LOW_INPUT = "low_input"          # Low external inputs (e.g., rainfed semi-arid)
+    UNSPECIFIED = "unspecified"      # Management not documented in source
+
+
 class AgriKnowledgeParameter(str, Enum):
     """Validated parameters for cover crop and protein crop knowledge."""
 
@@ -134,6 +149,13 @@ class AgriKnowledge(BaseEntity):
     crop_category: str | None = Field(
         default=None,
         description="cover_crop_winter, protein_crop, forage_legume, etc.",
+    )
+
+    # ── Management Regime ───────────────────────────────────────────────
+    management: str = Field(
+        default="unspecified",
+        description="Farming management regime: organic, conventional, integrated, low_input, unspecified",
+        examples=["organic", "conventional"],
     )
 
     def has_any_key(self) -> bool:

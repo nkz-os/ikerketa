@@ -19,6 +19,7 @@ from ikerketa.models.agronomy import (
     AgriKnowledge,
     AgriKnowledgeParameter,
     ClimateClass,
+    ManagementRegime,
 )
 
 __all__ = [
@@ -55,4 +56,5 @@ __all__ = [
     "AgriKnowledge",
     "AgriKnowledgeParameter",
     "ClimateClass",
+    "ManagementRegime",
 ]
