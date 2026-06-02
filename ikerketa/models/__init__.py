@@ -15,6 +15,11 @@ from ikerketa.models.pest import GDDModel, LifeStage, Pest
 from ikerketa.models.regulation import ActiveSubstance, Regulation
 from ikerketa.models.relationship import CompanionRelation, HostAssociation, NaturalEnemy
 from ikerketa.models.taxonomy import Taxon, TaxonSynonym
+from ikerketa.models.agronomy import (
+    AgriKnowledge,
+    AgriKnowledgeParameter,
+    ClimateClass,
+)
 
 __all__ = [
     # Base
@@ -46,4 +51,8 @@ __all__ = [
     # Ontology
     "OntologyConcept",
     "SemanticRelation",
+    # Agronomy
+    "AgriKnowledge",
+    "AgriKnowledgeParameter",
+    "ClimateClass",
 ]

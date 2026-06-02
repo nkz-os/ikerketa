@@ -47,6 +47,14 @@ class DataSource(str, Enum):
     AGROFORESTREE = "agroforestree"
     FORAGES = "forages"
     GLOBALLOMETREE = "globallometree"
+    # EU Cover Crops & Regenerative Agriculture
+    INTIA_COVER_CROPS = "intia_cover_crops"
+    JRC_MARS_PHENOLOGY = "jrc_mars_phenology"
+    LEGUMES_TRANSLATED = "legumes_translated"
+    DIVERIMPACTS = "diverimpacts"
+    ITACYL = "itacyl"
+    IFAPA = "ifapa"
+    COVER_CROP_KNOWLEDGE = "cover_crop_knowledge"
 
 
 class BaseEntity(BaseModel):
