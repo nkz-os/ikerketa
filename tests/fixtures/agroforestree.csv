@@ -1,0 +1,6 @@
+species_name,common_name,family,use_fodder,use_timber,use_fruit,use_soil_improvement,nitrogen_fixing,shade_tolerance,ecosystem_services
+Leucaena leucocephala,Leucaena,Fabaceae,true,true,false,true,true,full_sun,"nitrogen_fixation;fodder;soil_stabilization"
+Gliricidia sepium,Gliricidia,Fabaceae,true,false,false,true,true,partial_shade,"nitrogen_fixation;fodder;erosion_control"
+Moringa oleifera,Moringa,Moringaceae,true,false,true,false,false,full_sun,"fodder;pollinator_habitat"
+Faidherbia albida,Apple-ring acacia,Fabaceae,true,false,false,true,true,full_sun,"nitrogen_fixation;shade;fodder;soil_stabilization"
+Calliandra calothyrsus,Red calliandra,Fabaceae,true,false,false,true,true,partial_shade,"nitrogen_fixation;fodder;erosion_control;pollinator_habitat"

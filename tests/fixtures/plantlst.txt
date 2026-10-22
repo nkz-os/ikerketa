@@ -1,0 +1,8 @@
+"Symbol","Synonym Symbol","Scientific Name with Author","National Common Name","Family"
+"SOTU","","Solanum tuberosum L.","potato","Solanaceae"
+"LYCES","","Solanum lycopersicum L. (syn. Lycopersicon esculentum Mill.)","garden tomato","Solanaceae"
+"CAAN7","","Capsicum annuum L.","cayenne pepper","Solanaceae"
+"ALCE2","","Allium cepa L.","garden onion","Amaryllidaceae"
+"DACA6","","Daucus carota L.","Queen Anne's lace","Apiaceae"
+"TRRE3","TRPER","Trifolium repens L.","white clover","Fabaceae"
+"ZEAM","","Zea mays L.","corn","Poaceae"

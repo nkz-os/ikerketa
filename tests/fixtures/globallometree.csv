@@ -1,0 +1,6 @@
+equation_id,species_name,equation_form,dependent_var,independent_vars,coefficients,r_squared,sample_size,climate_zone,country
+GAT-00123,Quercus ilex,a * DBH^b,above_ground_biomass,DBH,"{""a"": 0.0284, ""b"": 2.573}",0.94,85,temperate,ES
+GAT-00456,Juglans regia,a * DBH^b * H^c,volume,DBH;H,"{""a"": 0.000047, ""b"": 1.89, ""c"": 0.98}",0.97,120,temperate,FR
+GAT-00789,Castanea sativa,a * DBH^b,biomass,DBH,"{""a"": 0.0361, ""b"": 2.489}",0.92,65,temperate,IT
+GAT-01012,Robinia pseudoacacia,a * DBH^b * H^c,carbon,DBH;H,"{""a"": 0.000023, ""b"": 2.12, ""c"": 0.78}",0.91,50,temperate,HU
+GAT-01345,Olea europaea,a * DBH^b,above_ground_biomass,DBH,"{""a"": 0.0456, ""b"": 2.31}",0.89,40,temperate,ES

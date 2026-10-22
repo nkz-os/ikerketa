@@ -1,0 +1,12 @@
+species_name,common_name,tbase_f,tmax_f,method,stage_name,stage_dd_low,stage_dd_high,generation,notes
+Leptinotarsa decemlineata,Colorado potato beetle,52,95,simple_avg,adult emergence,120,200,1,overwinturing adults emerge
+Leptinotarsa decemlineata,Colorado potato beetle,52,95,simple_avg,egg hatch,200,350,1,first generation eggs
+Leptinotarsa decemlineata,Colorado potato beetle,52,95,simple_avg,larval feeding,350,700,1,instars 1-4
+Leptinotarsa decemlineata,Colorado potato beetle,52,95,simple_avg,pupation,700,850,1,in soil
+Leptinotarsa decemlineata,Colorado potato beetle,52,95,simple_avg,adult emergence,850,1000,1,first generation adults
+Cydia pomonella,Codling moth,50,88,single_sine,first flight,100,250,1,biofix at sustained capture
+Cydia pomonella,Codling moth,50,88,single_sine,egg hatch,250,500,1,monitor for larval entry
+Cydia pomonella,Codling moth,50,88,single_sine,pupation,500,800,1,
+Cydia pomonella,Codling moth,50,88,single_sine,second flight,1050,1200,2,second generation
+Rhagoletis cerasi,European cherry fruit fly,41,86,simple_avg,adult emergence,450,600,1,
+Rhagoletis cerasi,European cherry fruit fly,41,86,simple_avg,oviposition,600,800,1,egg laying period

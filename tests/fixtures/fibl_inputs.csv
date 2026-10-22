@@ -1,0 +1,5 @@
+product_name,active_substance,manufacturer,eu_regulation,organic_compatible,category,target_pests,target_crops
+Neem Azal T/S,Azadirachtin,Trifolio-M GmbH,EU 2021/1165,true,insecticide,aphids whiteflies,vegetables fruit
+Cupravit blue,Copper hydroxide,Bayer CropScience,EU 2018/1981,true,fungicide,downy mildew,grape wine
+Spintor,Spinosad,Corteva Agriscience,EU 2021/1165,true,insecticide,thrips lepidoptera,vegetables
+Quassia extract,Quassin,Natural Plant Products,EU 2021/1165,true,insecticide,sawfly,fruit
