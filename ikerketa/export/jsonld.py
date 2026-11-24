@@ -18,7 +18,7 @@ _log = get_logger(__name__)
 # JSON-LD context for NKZ-BioOrchestrator
 _CONTEXT = {
     "@context": {
-        "nkz": "https://nkz.nekazari.eus/ontology/",
+        "nkz": "https://nkz-os.org/ontology/",
         "agrovoc": "http://aims.fao.org/aos/agrovoc/",
         "eppo": "https://gd.eppo.int/taxon/",
         "skos": "http://www.w3.org/2004/02/skos/core#",
